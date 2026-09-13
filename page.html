@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="bakery-logo.png" alt="North Star Bakery Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact & Pre-orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>North Star Bakery</h1>
+
+        <section id="home">
+            <h2>Welcome</h2>
+            
+            <section>
+                <h3>A Message from Our Bakers</h3>
+                <audio controls>
+                    <source src="bakery-welcome.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element. Please visit our store to hear our warm welcome!
+                </audio>
+            </section>
+
+            <section>
+                <h3>What We're Known For</h3>
+                <p>At North Star Bakery, we are community-centered and dedicated to warm, handmade baked goods. We specialize in artisanal breads, delicate pastries, and custom cakes made from locally sourced ingredients. Whether you are grabbing a quick commuter breakfast or planning a family event, we have something fresh for you.</p>
+                
+                <picture>
+                    <source media="(min-width: 800px)" srcset="bakery-feature-large.jpg">
+                    <img src="bakery-feature-small.jpg" alt="A beautiful spread of our fresh baked pastries and breads">
+                </picture>
+            </section>
+
+            <section>
+                <h3>Featured Item of the Week</h3>
+                <figure>
+                    <img src="bakery-signature-loaf.jpg" alt="A freshly baked, crusty artisanal signature loaf of bread">
+                    <figcaption>Our famous Signature Loaf - Baked fresh every morning!</figcaption>
+                </figure>
+            </section>
+        </section>
+        
+        <hr>
+
+        <section id="products" class="product-grid">
+            <h2>Our Products</h2>
+            <p>At North Star Bakery, we take pride in our warm, handmade goods. Browse our categories below to see what we're baking up today.</p>
+            <img src="bakery-bread.jpg" alt="A rustic spread of our fresh artisanal breads" style="width: 100%; margin-bottom: 1.5rem;">
+
+            <section>
+                <h3>Artisanal Breads</h3>
+                <p>Our signature breads are baked fresh every morning using locally sourced organic flour and our long-fermented sourdough starter for that perfect crust and chewy interior.</p>
+                <p><strong>Pricing:</strong> $6.00 &ndash; $12.00 per loaf</p>
+            </section>
+
+            <section>
+                <h3>Handmade Pastries</h3>
+                <p>Start your morning commute right with our selection of flaky croissants, sweet fruit danishes, and savory breakfast scones. Made by hand, fresh every day.</p>
+                <p><strong>Pricing:</strong> $3.50 &ndash; $6.50 each</p>
+            </section>
+
+            <section>
+                <h3>Custom Cakes</h3>
+                <p>Planning a special event or family gathering? Our custom cakes are the perfect centerpiece. Available in classic vanilla bean, rich dark chocolate, and seasonal fruit flavors.</p>
+                <p><strong>Pricing:</strong> $35.00 &ndash; $80.00 (varies by size and custom design)</p>
+            </section>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h2>About Us</h2>
+            
+            <section>
+                <h3>Our Story</h3>
+                <p>North Star Bakery began with a simple mission: to bring our neighborhood together over warm, handmade baked goods. What started as a small home kitchen operation has blossomed into a community-centered staple. We pride ourselves on being a welcoming space for commuters, families, and friends to gather and connect.</p>
+            </section>
+
+            <section>
+                <h3>Our Sourcing Philosophy</h3>
+                <p>Great baking starts with great ingredients. We are committed to supporting our local agricultural community by sourcing our organic flour, fresh dairy, and seasonal fruits directly from regional farmers. We believe that using sustainable, locally sourced ingredients ensures the highest quality while giving back to the community we love.</p>
+            </section>
+
+            <section>
+                <h3>Meet Our Team</h3>
+                <p>Our dedicated team of bakers and staff work tirelessly to make every visit special. From our head baker, who arrives long before dawn to tend to our sourdough starters, to our friendly front-of-house staff who always greet you with a smile, we are a family passionate about sharing our craft with you.</p>
+                
+                <video controls width="600">
+                    <source src="bakery-behind-scenes.mp4" type="video/mp4">
+                    Your browser does not support the video element. Please visit our bakery to see our team in action!
+                </video>
+            </section>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>Contact & Pre-orders</h2>
+            <p>Use the form below to ask a question or place a pre-order for our handmade goods.</p>
+
+            <form action="/submit-request" method="POST">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    
+                    <label for="single-customer-name">Full Name:</label>
+                    <input type="text" id="single-customer-name" name="customer-name" required>
+                    <br><br>
+
+                    <label for="single-customer-email">Email Address:</label>
+                    <input type="email" id="single-customer-email" name="customer-email" required>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Order & Inquiry Details</legend>
+
+                    <label for="single-request-type">Request Type:</label>
+                    <select id="single-request-type" name="request-type" required>
+                        <option value="">-- Please Select --</option>
+                        <option value="pre-order">Pre-order Request</option>
+                        <option value="general">General Question</option>
+                        <option value="event">Event Catering</option>
+                    </select>
+                    <br><br>
+
+                    <label for="single-pickup-date">Preferred Pickup Date:</label>
+                    <input type="date" id="single-pickup-date" name="pickup-date">
+                    <br><br>
+
+                    <label for="single-item-details">Item Details / Questions:</label><br>
+                    <textarea id="single-item-details" name="item-details" rows="5" cols="40" required></textarea>
+                    <br><br>
+
+                    <label for="single-allergy-notes">Allergy Notes (if applicable):</label><br>
+                    <textarea id="single-allergy-notes" name="allergy-notes" rows="3" cols="40"></textarea>
+                </fieldset>
+
+                <br>
+                <button type="submit">Submit Request</button>
+            </form>
+
+            <section>
+                <h3>Visit Us</h3>
+                <img src="bakery-storefront.jpg" alt="The welcoming storefront of North Star Bakery">
+                <p><strong>Location:</strong> 123 Main Street, Neighborhood District</p>
+                <p><strong>Hours:</strong> Tuesday - Sunday: 6:00 AM - 3:00 PM (Closed Mondays)</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

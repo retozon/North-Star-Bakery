@@ -1,0 +1,162 @@
+:root {
+    --bg-cream: #FDF9F1;
+    --text-brown: #3E2723;
+    --header-dark: #271610;
+    --accent-orange: #D84315;
+
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-brown);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, legend {
+    font-family: var(--font-heading);
+    color: var(--header-dark);
+    margin-bottom: 0.5em;
+}
+
+img, video, picture {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+header {
+    background-color: var(--header-dark);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header img {
+    max-width: 180px;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-orange);
+}
+
+main {
+    flex: 1;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #EADDCD;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset {
+    border: 2px solid var(--header-dark);
+    border-radius: 6px;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.4rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+button[type="submit"]:hover {
+    background-color: #B5360F;
+}
+
+footer {
+    background-color: var(--header-dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    form {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    
+    .product-grid section {
+        flex: 1 1 calc(33.333% - 2rem);
+        border-bottom: none;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 6px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+}
