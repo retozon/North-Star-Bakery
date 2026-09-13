@@ -108,20 +108,73 @@ textarea {
     box-sizing: border-box;
 }
 
-button[type="submit"] {
+button[type="submit"],
+.favorite-button,
+.secondary-button {
     background-color: var(--accent-orange);
     color: white;
     border: none;
-    padding: 1rem;
-    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
     font-family: var(--font-body);
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.favorite-button:hover,
+.secondary-button:hover {
     background-color: #B5360F;
+}
+
+.secondary-button {
+    background-color: var(--header-dark);
+}
+
+.secondary-button:hover {
+    background-color: #4A2A20;
+}
+
+.secondary-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.favorites-panel {
+    background-color: white;
+    border: 2px solid #EADDCD;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-top: 2rem;
+}
+
+.favorites-summary {
+    font-weight: bold;
+}
+
+.favorite-button[aria-pressed="true"] {
+    background-color: var(--header-dark);
+}
+
+.error-message {
+    color: #A61B1B;
+    font-weight: bold;
+    margin: 0.35rem 0 1rem;
+}
+
+.invalid-field {
+    border: 2px solid #A61B1B !important;
+    background-color: #FFF6F6;
+}
+
+.form-status {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.success-message {
+    color: #216E39;
 }
 
 footer {
